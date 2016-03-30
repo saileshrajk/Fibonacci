@@ -4,9 +4,15 @@ namespace FibonacciSeries
 {
     public class FibonacciSeries
     {
-        public List<int> GetList()
+        public List<int> GetFibonacciNumbers(int length)
         {
-            return new List<int> {0};
+            if (length == 1)
+            {
+                return new List<int> { 0 };
+            }
+
+            return new List<int> { 0, 1 };
         }
     }
 }
+
