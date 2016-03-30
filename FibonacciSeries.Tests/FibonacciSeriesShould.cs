@@ -28,5 +28,16 @@ namespace FibonacciSeries.Tests
 
             Assert.That(fibonacciNumbers, Is.EqualTo(new List<int> { 0, 1 }));
         }
+
+        [Test]
+        public void return_first_three_elements_of_fibonacci_series_given_length_of_3()
+        {
+            var fibonacciSeries = new FibonacciSeries();
+            var LENGTH = 3;
+
+            var fibonacciNumbers = fibonacciSeries.GetFibonacciNumbers(LENGTH);
+
+            Assert.That(fibonacciNumbers, Is.EqualTo(new List<int>{0,1,1}));
+        }
     }
 }
