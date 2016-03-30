@@ -10,7 +10,7 @@ namespace FibonacciSeries
             {
                 return new List<int> {0};
             }
-            else if (length == 2)
+            if (length == 2)
             {
                 return new List<int> {0, 1};
             }
