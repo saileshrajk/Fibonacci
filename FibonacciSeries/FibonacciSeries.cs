@@ -7,17 +7,15 @@ namespace FibonacciSeries
         public List<int> GetFibonacciNumbers(int length)
         {
             var fibonaccinumbers = new List<int>();
-            for (var i = 0; i < length; i++)
+            
+            for (var index = 0; index < length; index++)
             {
-                if (i < 2)
-                {
-                    fibonaccinumbers.Add(i);
-                    continue;
-                }
-
-                var currentFibonaccinumber = fibonaccinumbers[i - 1] + fibonaccinumbers[i - 2];
-                fibonaccinumbers.Add(currentFibonaccinumber);
+                var currentFibonacciNumber = index < 2 
+                    ? index 
+                    : fibonaccinumbers[index - 1] + fibonaccinumbers[index - 2];
+                fibonaccinumbers.Add(currentFibonacciNumber);
             }
+
             return fibonaccinumbers;
         }
     }
