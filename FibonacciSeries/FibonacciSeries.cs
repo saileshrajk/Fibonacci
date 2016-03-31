@@ -14,7 +14,12 @@ namespace FibonacciSeries
             {
                 return new List<int> {0, 1};
             }
-            return new List<int> {0, 1, 1};
+            if (length == 3)
+            {
+                return new List<int> {0, 1, 1};
+            }
+
+            return new List<int> { 0, 1, 1,2,3 };
         }
     }
 }

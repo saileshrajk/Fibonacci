@@ -18,6 +18,7 @@ namespace FibonacciSeries.Tests
         [TestCase(1, new[] {0})]
         [TestCase(2, new[] {0, 1})]
         [TestCase(3, new[] {0, 1, 1})]
+        [TestCase(5, new[] {0, 1, 1, 2, 3})]
         public void ReturnFibonacciNumbers_GivenLength(int length, int[] expectedFibonacciNumbers)
         {
             var fibonacciNumbers = _fibonacciSeries.GetFibonacciNumbers(length);
