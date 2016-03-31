@@ -15,10 +15,12 @@ namespace FibonacciSeries.Tests
             _fibonacciSeries = new FibonacciSeries();
         }
 
+        [TestCase(0, new int[] {})]
         [TestCase(1, new[] {0})]
         [TestCase(2, new[] {0, 1})]
         [TestCase(3, new[] {0, 1, 1})]
         [TestCase(5, new[] {0, 1, 1, 2, 3})]
+        [TestCase(7, new[] {0, 1, 1, 2, 3, 5, 8})]
         public void ReturnFibonacciNumbers_GivenLength(int length, int[] expectedFibonacciNumbers)
         {
             var fibonacciNumbers = _fibonacciSeries.GetFibonacciNumbers(length);
